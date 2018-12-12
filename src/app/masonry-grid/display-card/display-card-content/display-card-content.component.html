@@ -1,0 +1,23 @@
+<div class="animated bounceIn">
+  <div *ngIf="card.type === 'rich'" class="card">
+    <img class="card-img-top" [src]="card.cardImageURL" [style.height.px]="card.config.height" alt="Card image cap"
+      (load)="cardLoaded.emit(true)">
+    <div class="card-body">
+      <h5 class="card-title">{{card.title}}</h5>
+      <p class="card-text">{{card.cardTextContent}}</p>
+    </div>
+  </div>
+  <div *ngIf="card.type === 'quote'" class="card p-3" [style.backgroundColor]="card.config.backgroundColour">
+    <blockquote class="blockquote mb-0 card-body">
+      <p [style.color]="card.config.textColour">{{card.cardTextContent}}</p>
+      <footer class="blockquote-footer">
+        <small class="text-muted">
+          <cite title="Source Title" [style.color]="card.config.textColour">{{card.source}}</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div *ngIf="card.type === 'image'" class="card">
+    <img class="card-img" [src]="card.cardImageURL" [style.height.px]="card.config.height" alt="Card image" (load)="cardLoaded.emit(true)">
+  </div>
+</div>

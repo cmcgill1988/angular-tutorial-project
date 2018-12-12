@@ -1,0 +1,13 @@
+<div class="animated infinite pulse delay-2s">
+  <div *ngIf="card.type === 'rich'" class="card">
+    <img class="card-img-top" src="../../../../assets/image-placeholder_3x2.svg" [style.height.px]="card.config.height"
+      alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">&nbsp;</h5>
+      <p class="card-text">&nbsp;</p>
+    </div>
+  </div>
+  <div *ngIf="card.type === 'image'" class="card">
+    <img class="card-img" src="../../../../assets/image-placeholder_3x2.svg" [style.height.px]="card.config.height" alt="Card image">
+  </div>
+</div>
