@@ -1,2 +1,2 @@
 <app-display-card-content [hidden]="card.isLoading" [card]="card" (cardLoaded)="updateTemplates($event)" ></app-display-card-content>
-<app-skeleton-display-card *ngIf="card.isLoading" [card]="card" class="animated infinite pulse delay-2s"></app-skeleton-display-card>
+<app-skeleton-display-card *ngIf="card.isLoading" [card]="card"></app-skeleton-display-card>

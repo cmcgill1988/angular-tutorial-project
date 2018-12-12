@@ -1,4 +1,4 @@
-<div class="animated bounceIn">
+<div class="animated flipInY slow">
   <div *ngIf="card.type === 'rich'" class="card">
     <img class="card-img-top" [src]="card.cardImageURL" [style.height.px]="card.config.height" alt="Card image cap"
       (load)="cardLoaded.emit(true)">
