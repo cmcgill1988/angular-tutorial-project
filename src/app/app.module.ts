@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MasonryGridModule } from './masonry-grid/masonry-grid.module';
 import { HttpClientModule } from '@angular/common/http';
+import { StepperComponent } from './stepper/stepper.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StepperComponent
   ],
   imports: [
     BrowserModule,
